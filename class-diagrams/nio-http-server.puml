@@ -1,0 +1,39 @@
+@startuml
+
+class HTTPServer {
+    + void accept(Selector selector, SelectionKey key)
+    + void read(SelectionKey key)
+    + void write(SelectionKey key)
+    + void wakeupSelector()
+}
+
+class Request {
+
+}
+
+class Response {
+
+}
+
+class RequestHandler {
+    + Void call()
+}
+
+class Servlet {
+    + void service(Request req, Response rep)
+}
+
+interface Callable
+
+Executors <|-. HTTPServer
+ServerSocketChannel <|-. HTTPServer
+Selector <|-. HTTPServer
+RequestHandler <|-. HTTPServer
+
+Callable <|-- RequestHandler
+
+Servlet <|-. RequestHandler
+Request <|-. RequestHandler
+Response <|-. RequestHandler
+
+@enduml
