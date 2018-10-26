@@ -2,20 +2,27 @@ group 'com.yaming.http'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'idea'
 apply plugin: 'application'
 
-mainClassName = 'com.yaming.http.Main'
+mainClassName = 'com.yaming.http.server.Main'
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.11.1'
     compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.11.1'
+    // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.6'
+    compile group: 'org.apache.httpcomponents', name: 'httpcore', version: '4.4.10'
+    compile group: 'org.apache.httpcomponents', name: 'httpmime', version: '4.5.6'
+
 }
 
 run {
