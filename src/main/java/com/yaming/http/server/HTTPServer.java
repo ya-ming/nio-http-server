@@ -75,7 +75,7 @@ public class HTTPServer {
         SocketChannel channel = (SocketChannel) key.channel();
         logger.info("read " + channel);
 
-        ByteBuffer buffer = ByteBuffer.allocate(20480);
+        ByteBuffer buffer = ByteBuffer.allocate(4096);
         channel.read(buffer);
 
         pool.submit(new RequestHandler(key, this, buffer));

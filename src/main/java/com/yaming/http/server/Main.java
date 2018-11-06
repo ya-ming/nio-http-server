@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         if (args.length == 0) {
             System.out.println(
-                    "Usage: java HTTPServer file port encoding");
+                    "Usage: java HTTPServer port encoding");
             return;
         }
 
@@ -20,7 +20,7 @@ public class Main {
             // set the port to listen on
             int port;
             try {
-                port = Integer.parseInt(args[1]);
+                port = Integer.parseInt(args[0]);
                 if (port < 1 || port > 65535) port = 80;
             } catch (RuntimeException ex) {
                 port = 80;
