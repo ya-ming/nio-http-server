@@ -13,7 +13,7 @@ public class HTTPClient {
 
     public static void main(String[] args) {
         if (args.length == 0) {
-            System.out.println("Usage: java ChargenClient host [port]");
+            System.out.println("Usage: java HTTPClient host [port]");
             return;
         }
 
