@@ -9,7 +9,7 @@ import java.nio.channels.SocketChannel;
 import java.nio.channels.WritableByteChannel;
 
 public class HTTPClient {
-    public static int DEFAULT_PORT = 19;
+    public static int DEFAULT_PORT = 80;
 
     public static void main(String[] args) {
         if (args.length == 0) {
