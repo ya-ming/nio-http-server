@@ -1,4 +1,4 @@
-package com.yaming.http;
+package com.yaming.http.server;
 
 public class Servlet {
     public void service(Request req, Response rep){

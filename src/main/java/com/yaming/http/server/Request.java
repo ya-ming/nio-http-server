@@ -1,4 +1,4 @@
-package com.yaming.http;
+package com.yaming.http.server;
 
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;

@@ -1,17 +1,11 @@
-package com.yaming.http;
+package com.yaming.http.server;
 
 import com.yaming.http.utils.ByteBufferPrinter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.IOException;
-import java.net.URLConnection;
 import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
-import java.nio.charset.Charset;
-import java.nio.file.FileSystems;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.concurrent.Callable;
 
 public class RequestHandler implements Callable<Void> {

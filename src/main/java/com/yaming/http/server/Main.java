@@ -1,4 +1,4 @@
-package com.yaming.http;
+package com.yaming.http.server;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
